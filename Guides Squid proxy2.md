@@ -163,8 +163,7 @@ URL:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\
 
 -   Inbound squid proxy port: allowing 3128 port traffic from squid proxy to
     Deep security agent that has been installed in ec2 instance.
-
-![C:\\Users\\omar_Almulhim\\Desktop\\guides\\screenshots2\\squid proxy\\private SG subent inbound.JPG](media/acfcccf7f3908cd0356d055f2f7d9b8d.jpg)
+(media/acfcccf7f3908cd0356d055f2f7d9b8d.jpg)
 
 ![](media/18a477b1149651120194c6c94d217991.jpg)
 
