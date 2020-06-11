@@ -13,7 +13,7 @@ This document is divided into two sections:
 
     ![](media/76b7b84c1f3abcbf697e7b2a4561b152.jpg)
 
-    ![C:\\Users\\omar_Almulhim\\Downloads\\Copy of AWS (2019) horizontal framework squid proxy .jpeg](media/31f7b57e8fa0714d73f8302d6abfc75c.jpg)
+    (media/31f7b57e8fa0714d73f8302d6abfc75c.jpg)
 
 -   **Cloud one workload security:**
 
@@ -56,7 +56,7 @@ After you create internet gateway, you need to associate it with VPC.
 
 -   This subnet will be used for Squid proxy instance.
 
-![C:\\Users\\omar_Almulhim\\Desktop\\guides\\screenshots2\\squid proxy\\omar public.JPG](media/82352c03ddf00f55c1df78741df37209.jpg)
+
 
 -   **Private Subnet:**
 
@@ -78,7 +78,7 @@ going to the internet.
 -   Open Puttygen program then choose load then select key pair file that you
     assign it with this ec2 instance then save private key.
 
-    ![C:\\Users\\omar_Almulhim\\Desktop\\guides\\screenshots2\\squid proxy\\putty generator.JPG](media/62b16ad86207c1c60b9163411da4bc54.jpg)
+  (media/62b16ad86207c1c60b9163411da4bc54.jpg)
 
 -   On putty interface choose SSH section then Auth browse your private key file
     that you saved from Puttygen then click open to connect ec2-instance.
