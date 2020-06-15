@@ -11,7 +11,7 @@ This document is divided into two sections:
 -   This section contains how to prepare your environment in AWS before
     installing deep security agent.
 
-![](media/76b7b84c1f3abcbf697e7b2a4561b152.jpg)
+https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image001.jpg
 
 Bastion host is acting as a jump server to make connection from remote
 authorized device to instances in private subnet (optional).
