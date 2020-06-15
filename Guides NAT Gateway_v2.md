@@ -107,11 +107,12 @@ need to associate this route within public subnet).
 
 -   **Security group for bastion host in public subnet**:
 
-![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image009.jpg)
-
-Inbound RDP port: Allowing RDP traffic to accept inbound traffic from authorized
+-   Inbound RDP: Allowing RDP traffic to accept inbound traffic from authorized
 external device to bastion host, (**Note:** specify your own public IP to
 prevent un authorized connection to bastion host(optional)).
+
+![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image009.jpg)
+
 
 -   Outbound RDP: Allowing RDP traffic from bastion host to any ec2 instances in
     local network(optional).
@@ -120,12 +121,13 @@ prevent un authorized connection to bastion host(optional)).
 
 -   **Security group in private subnet:**
 
-![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image011.jpg)
-
-Inbound RDP: allowing RDP inbound traffic from bastion host to any instances in
+-   Inbound RDP: allowing RDP inbound traffic from bastion host to any instances in
 private subnet in local network(optional).
 
--   Outbound: HTTPS: allowing HTTPS outbound traffic and it is used by various
+![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image011.jpg)
+
+
+-   Outbound HTTPS: allowing HTTPS outbound traffic and it is used by various
     Deep Security cloud services, you can restrict IP address in this URL in
     Deep security as service
     section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
