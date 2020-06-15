@@ -1,4 +1,4 @@
-<h2>introduction:</h2>
+## introduction:
 =================
 
 This is a quick start guideline for how to implement deep security SaaS with NAT
@@ -6,7 +6,7 @@ gateway in AWS.
 
 This document is divided into two sections:
 
--   <h3>Setup environment:</h3>
+-   ### Setup environment:
 
  This section contains how to prepare your environment in AWS before
     installing deep security agent.
@@ -20,15 +20,15 @@ authorized device to instances in private subnet (optional).
 
 ![](media/f7c519cc91092c03c18f214673681189.jpg)
 
--   <h3>Install deep security agent:</h3>
+-    ### Install deep security agent:
 
  This section contains a guideline for how to install deep security agent in
     cloud on workload security dashboard.
 
-</h3>Setup your enviroment</h3>
+### Setup your enviroment
 =========================
 
-1.  <h4>Virtual private cloud (VPC):</h4>
+1.  #### Virtual private cloud (VPC):
 
 -   Create VPC and assign any private IP address ranges:
 
@@ -42,7 +42,7 @@ subnet sizing for private IPv4 in AWS:
 | 172.16. 0.0 - 172.31. 255.255   | (172.16/12 prefix)  |
 | 192.168. 0.0 - 192.168. 255.255 | (192.168/16 prefix) |
 
-2.  </h4>Internet gateway:**</h4>
+2.  #### Internet gateway:
 
 -   Internet gateway is like a bridge connection between internet and VPC.
 
@@ -50,7 +50,7 @@ subnet sizing for private IPv4 in AWS:
 
 After you create an internet gateway, you need to associate it with VPC.
 
-3.  <h4>Subnets:</h4>
+3.  #### Subnets:
 
 -   It needs to create two subnets which are:
 
@@ -67,7 +67,7 @@ After you create an internet gateway, you need to associate it with VPC.
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image005.jpg)
 
 
-4.  <h4>Nat Gateway:</h4>
+4.  #### Nat Gateway:
 
 -   The main purpose of Nat gateway is to translate private IP addresses in
     local network into one public IP address when EC2 instances want to connect
@@ -75,7 +75,7 @@ After you create an internet gateway, you need to associate it with VPC.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image006.jpg)
 
-5.  </h4>Route tables:</h4>
+5.  #### Route tables:
 
 -   You need to create two route tables which are:
 
@@ -99,7 +99,7 @@ need to associate this route within public subnet).
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image008.jpg)
 
 
-6.  <h4>Security Group:</h4>
+6.  #### Security Group:
 
 -   Aws security group let you limit and control inbound & outbound traffic in
     EC2 instances level.
@@ -137,10 +137,10 @@ section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.h
 environment, default ports, deep security URL, and etc. Kindly check this
 URL in section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
 
-<h2>Install deep security agent</h2>
+### Install deep security agent
 ===============================
 
-1.  <h3>Signup/Login Dashboard:</h3>
+1.  #### Signup/Login Dashboard:
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image013.jpg)
 
@@ -151,20 +151,20 @@ You can sign up or login through this URL: <https://cloudone.trendmicro.com/>
 After successfully registering/login your account, you will see cloud one
 dashboard click on workload security.
 
-2.  <h3>Add AWS account:</h3>
+2.  #### Add AWS account:
 
    Cloud one workload security dashboard will be opened click on computers tab
     then on left side right click on computers then choose add AWS account.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image015.jpg)
 
-3.  <h3>Setup type:</h3>
+3.  #### Setup type:
 
    You can add AWS account by using quick & Advanced.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image016.jpg)
 
-4.  <h3>Deploy deep security agent on server:</h3>
+4.  #### Deploy deep security agent on server:
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image017.jpg)
 
@@ -189,7 +189,7 @@ Installation guide for manually install deep security
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image019.jpg)
 
-5. </h3>Check the state of deep security agent after deployment:</h3>
+5. #### Check the state of deep security agent after deployment:
 
    Go to computer and see the status of instance.
 
