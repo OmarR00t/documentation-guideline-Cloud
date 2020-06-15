@@ -1,4 +1,4 @@
-**introduction:**
+<h2>introduction:</h2>
 =================
 
 This is a quick start guideline for how to implement deep security SaaS with NAT
@@ -6,7 +6,7 @@ gateway in AWS.
 
 This document is divided into two sections:
 
--   **Setup environment:**
+-   <h3>Setup environment:</h3>
 
  This section contains how to prepare your environment in AWS before
     installing deep security agent.
@@ -20,15 +20,15 @@ authorized device to instances in private subnet (optional).
 
 ![](media/f7c519cc91092c03c18f214673681189.jpg)
 
--   **Cloud one workload security:**
+-   <h3>Install deep security agent:</h3>
 
  This section contains a guideline for how to install deep security agent in
     cloud on workload security dashboard.
 
-**Setup your enviroment**
+</h3>Setup your enviroment</h3>
 =========================
 
-1.  **Virtual private cloud (VPC):**
+1.  <h4>Virtual private cloud (VPC):</h4>
 
 -   Create VPC and assign any private IP address ranges:
 
@@ -42,7 +42,7 @@ subnet sizing for private IPv4 in AWS:
 | 172.16. 0.0 - 172.31. 255.255   | (172.16/12 prefix)  |
 | 192.168. 0.0 - 192.168. 255.255 | (192.168/16 prefix) |
 
-2.  **Internet gateway:**
+2.  </h4>Internet gateway:**</h4>
 
 -   Internet gateway is like a bridge connection between internet and VPC.
 
@@ -50,7 +50,7 @@ subnet sizing for private IPv4 in AWS:
 
 After you create an internet gateway, you need to associate it with VPC.
 
-3.  **Subnets:**
+3.  <h4>Subnets:</h4>
 
 -   It needs to create two subnets which are:
 
@@ -67,7 +67,7 @@ After you create an internet gateway, you need to associate it with VPC.
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image005.jpg)
 
 
-4.  **Nat Gateway:**
+4.  <h4>Nat Gateway:</h4>
 
 -   The main purpose of Nat gateway is to translate private IP addresses in
     local network into one public IP address when EC2 instances want to connect
@@ -75,7 +75,7 @@ After you create an internet gateway, you need to associate it with VPC.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image006.jpg)
 
-5.  **Route tables:**
+5.  </h4>Route tables:</h4>
 
 -   You need to create two route tables which are:
 
@@ -99,49 +99,48 @@ need to associate this route within public subnet).
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image008.jpg)
 
 
-6.  **Security Group:**
+6.  <h4>Security Group:</h4>
 
 -   Aws security group let you limit and control inbound & outbound traffic in
     EC2 instances level.
 
    **Security group for bastion host in public subnet**:
 
-   Inbound RDP: Allowing RDP traffic to accept inbound traffic from authorized
+Inbound RDP: Allowing RDP traffic to accept inbound traffic from authorized
 external device to bastion host, (**Note:** specify your own public IP to
 prevent un authorized connection to bastion host(optional)).
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image009.jpg)
 
 
-   Outbound RDP: Allowing RDP traffic from bastion host to any ec2 instances in
-    local network(optional).
+Outbound RDP: Allowing RDP traffic from bastion host to any ec2 instances in
+local network(optional).
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image010.jpg)
 
    **Security group in private subnet:**
 
- Inbound RDP: allowing RDP inbound traffic from bastion host to any instances in
+Inbound RDP: allowing RDP inbound traffic from bastion host to any instances in
 private subnet in local network(optional).
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image011.jpg)
 
 
-   Outbound HTTPS: allowing HTTPS outbound traffic and it is used by various
-    Deep Security cloud services, you can restrict IP address in this URL in
-    Deep security as service
-    section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
+Outbound HTTPS: allowing HTTPS outbound traffic and it is used by various
+Deep Security cloud services, you can restrict IP address in this URL in
+Deep security as service.
+section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image012.jpg)
 
-   **Note:** If you need to restrict the IP address that allowed in your
-    environment, default ports, deep security URL, and etc. Kindly check this
-    URL in section:
-    [https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
+**Note:** If you need to restrict the IP address that allowed in your
+environment, default ports, deep security URL, and etc. Kindly check this
+URL in section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
 
-**Install deep security agent**
+<h2>Install deep security agent</h2>
 ===============================
 
-1.  **Signup/Login Dashboard:**
+1.  <h3>Signup/Login Dashboard:</h3>
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image013.jpg)
 
@@ -152,27 +151,27 @@ You can sign up or login through this URL: <https://cloudone.trendmicro.com/>
 After successfully registering/login your account, you will see cloud one
 dashboard click on workload security.
 
-2.  **Add AWS account:**
+2.  <h3>Add AWS account:</h3>
 
    Cloud one workload security dashboard will be opened click on computers tab
     then on left side right click on computers then choose add AWS account.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image015.jpg)
 
-3.  **Setup type:**
+3.  <h3>Setup type:</h3>
 
    You can add AWS account by using quick & Advanced.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image016.jpg)
 
-4.  **Deploy deep security agent on server:**
+4.  <h3>Deploy deep security agent on server:</h3>
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image017.jpg)
 
 In cloud one workload dashboard, click on support and you will see two ways of
 deployment.
 
-   **1-Manual install Deep security agent:**
+   **Manual install Deep security agent:**
 
 If you want to download Agent package installer and install it manually.
 
@@ -181,7 +180,7 @@ Installation guide for manually install deep security
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image018.jpg)
 
-    **2-Deployment script:**
+   **Deployment script:**
 
    This option will install agent by using script.
 
@@ -190,7 +189,7 @@ Installation guide for manually install deep security
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image019.jpg)
 
-5.  **Check the state of deep security agent after deployment:**
+5. </h3>Check the state of deep security agent after deployment:</h3>
 
    Go to computer and see the status of instance.
 
