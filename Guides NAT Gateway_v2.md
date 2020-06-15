@@ -116,7 +116,7 @@ prevent un authorized connection to bastion host(optional)).
 Outbound RDP: Allowing RDP traffic from bastion host to any ec2 instances in
 local network(optional).
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image010.jpg)
+  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image010.jpg)
 
    **Security group in private subnet:**
 
@@ -131,7 +131,7 @@ Deep Security cloud services, you can restrict IP address in this URL in
 Deep security as service.
 section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image012.jpg)
+  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image012.jpg)
 
 **Note:** If you need to restrict the IP address that allowed in your
 environment, default ports, deep security URL, and etc. Kindly check this
@@ -156,13 +156,13 @@ dashboard click on workload security.
    Cloud one workload security dashboard will be opened click on computers tab
     then on left side right click on computers then choose add AWS account.
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image015.jpg)
+   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image015.jpg)
 
 3.  #### Setup type:
 
    You can add AWS account by using quick & Advanced.
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image016.jpg)
+  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image016.jpg)
 
 4.  #### Deploy deep security agent on server:
 
@@ -178,7 +178,7 @@ If you want to download Agent package installer and install it manually.
 Installation guide for manually install deep security
     agent:<https://help.deepsecurity.trendmicro.com/10_2/aws/Get-Started/Install/install-dsa.html>
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image018.jpg)
+  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image018.jpg)
 
    **Deployment script:**
 
@@ -187,7 +187,7 @@ Installation guide for manually install deep security
    Installation guide for install deep security agent using deployment script:
     <https://help.deepsecurity.trendmicro.com/10_2/aws/Add-Computers/ug-add-dep-scripts.html>
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image019.jpg)
+   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image019.jpg)
 
 5. #### Check the state of deep security agent after deployment:
 
