@@ -11,9 +11,9 @@ This document is divided into two sections:
 -   This section contains how to setup your environment and walkthrough in every
     step using AWS.
 
-    ![](media/76b7b84c1f3abcbf697e7b2a4561b152.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/1.jpg)
 
-    (media/31f7b57e8fa0714d73f8302d6abfc75c.jpg)
+    
 
 -   **Cloud one workload security:**
 
@@ -27,7 +27,7 @@ This document is divided into two sections:
 
 -   Create VPC and assign any private IP address ranges:
 
-![](media/21fdcc960fd1cc8e7158d9d3e91c73f6.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/2.jpg)
 
 Subnet sizing for private IPv4 in AWS:
 
@@ -41,7 +41,7 @@ Subnet sizing for private IPv4 in AWS:
 
 -   Internet gateway is acting as bridge connection between internet and VPC.
 
-![](media/da9b3213a5da2dbdfbd42792bf6830f7.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/3.jpg)
 
 After you create internet gateway, you need to associate it with VPC.
 
@@ -60,7 +60,7 @@ After you create internet gateway, you need to associate it with VPC.
 
 -   **Private Subnet:**
 
-![](media/3fa63be6a21ce251ccbbf24ac5615628.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/4.jpg)
 
 It will configure to access to internet through Squid proxy if the traffic is
 going to the internet.
@@ -73,21 +73,21 @@ going to the internet.
 -   Open putty On session section –\<Write (username \@Public IP address) and
     choose on connection type SSH.
 
-    ![](media/357d4ab7ea507c80aab88c3049b79b34.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/5.jpg)
 
 -   Open Puttygen program then choose load then select key pair file that you
     assign it with this ec2 instance then save private key.
 
-  (media/62b16ad86207c1c60b9163411da4bc54.jpg)
+  
 
 -   On putty interface choose SSH section then Auth browse your private key file
     that you saved from Puttygen then click open to connect ec2-instance.
 
-    ![](media/3afca5dc63d5e165d1ed9961de004b0f.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/6.jpg)
 
 -   write sudo yum install -y squid –\< to install squid proxy
 
-    ![](media/81bcbe3bccfbd82000ac1a6c68d5b313.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/7.jpg)
 
     sudo service squid start
 
@@ -106,7 +106,7 @@ going to the internet.
 
     **http_access deny all**
 
-![](media/542dcf305ebcf5b25f18573fbacc9c56.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/8.jpg)
 
 After you add these commands Press Esc key and type: wq to save changes to
 a file and exit from vim.
@@ -125,11 +125,11 @@ a file and exit from vim.
     traffic to go through Squid proxy if the traffic is going to internet (you
     need to associate this route within private subnet).
 
-    ![](media/3fa63be6a21ce251ccbbf24ac5615628.jpg)
+   ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/9.jpg)
 
 -   **Public route table:**
 
-![](media/6ecfe64fc411d61176e6e8be59f09bec.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/10.jpg)
 
 Once you create public route table, the default route will navigate local
 traffic to go through local network and it needs to add new route which navigate
@@ -147,12 +147,12 @@ any traffic to go through internet gateway if the traffic is going to internet
     authorized external device to squid proxy, (**Note:** specify your own
     public IP to prevent an authorized connection to squid proxy (optional)).
 
-![](media/c7582805f8e810ca6b8cb31b48f7fc5e.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/11.jpg)
 
 Inbound squid proxy port: allowing 3128 port traffic from internet to squid
 proxy.
 
-![](media/d48e47a3323e30d965dda8e503d5c62e.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/12.jpg)
 
 Outbound HTTPS:allowing HTTPS outbound traffic and it is used for various Deep
 Security cloud services, you can restrict IP addresses in HTTPS port ,for more
@@ -165,7 +165,7 @@ URL:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\
     Deep security agent that has been installed in ec2 instance.
 (media/acfcccf7f3908cd0356d055f2f7d9b8d.jpg)
 
-![](media/18a477b1149651120194c6c94d217991.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/13.jpg)
 
 Outbound squid proxy port: allowing 3128 port traffic from ec2 instance that has
 been installed Deep security agent to squid proxy server.
@@ -178,11 +178,11 @@ been installed Deep security agent to squid proxy server.
 
 1.  **Signup/Login Dashboard:**
 
-![](media/ce730b0678d6ae21d5674bd0ec905d68.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/14.jpg)
 
 You can sign up or login by using this URL: <https://cloudone.trendmicro.com/>
 
-![](media/9d3c61e607ca5f671fea6034b9cae6cd.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/15.jpg)
 
 After successfully registering, login your account, you will see cloud one
 dashboard click on workload security.
@@ -192,28 +192,28 @@ dashboard click on workload security.
 -   Cloud one workload security dashboard will be opened click on computers tab
     then on left side right click on computers then choose add AWS account.
 
-    ![](media/03ebc9225f1dd0ddbff3911eecdae5df.jpg)
+   ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/16.jpg)
 
 1.  **Setup type:**
 
 -   You can add AWS account by using quick & Advanced.
 
-    ![](media/f48164668c9b24d47b76ee4244736507.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/17.jpg)
 
 1.  **Add squid proxy server in workload security:**
 
-![](media/e9211e8777595971201e215317b135ec.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/18.jpg)
 
 Go to administration then click system setting, click new to add new proxy.
 
 -   In new proxy properties interface, write the private IP squid proxy with
     port.
 
-    ![](media/31b9774ee5df234fd54d00d3109a3ae2.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/19.jpg)
 
 1.  **Deploy deep security agent on server:**
 
-![](media/8d0d56aa6bf78a1f4edb3a09f4c434fa.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/20.jpg)
 
 In cloud one workload dashboard, click on support and you will see two ways of
 deployment.
@@ -225,7 +225,7 @@ deployment.
 -   installation guide for manually install deep security
     agent:<https://help.deepsecurity.trendmicro.com/10_2/aws/Get-Started/Install/install-dsa.html>
 
-    ![](media/c4a97d9edbadebb7dfa34de22f3349e2.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/21.jpg)
 
 -   Deployment script:
 
@@ -236,7 +236,7 @@ deployment.
 
 -   In proxy to contact deep security manager & proxy to contact relay options:
 
-    ![](media/ee469bb1a52574669c26ec22dec8c7e2.jpg)
+    ![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/22.jpg)
 
     you need to select squid proxy that you already added in previous step.
 
@@ -244,4 +244,4 @@ deployment.
 
 -   Go to computer and see the status of instance.
 
-![](media/999c5a6cd4c32caa91676fb92ad7a80a.jpg)
+![alt text](https://github.com/OmarR00t/documentation-beta-/blob/master/assets/23.jpg)
