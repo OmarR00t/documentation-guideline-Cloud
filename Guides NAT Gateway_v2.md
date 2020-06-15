@@ -8,7 +8,7 @@ This document is divided into two sections:
 
 -   **Setup environment:**
 
--   This section contains how to prepare your environment in AWS before
+ This section contains how to prepare your environment in AWS before
     installing deep security agent.
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image001.jpg)
@@ -22,7 +22,7 @@ authorized device to instances in private subnet (optional).
 
 -   **Cloud one workload security:**
 
--   This section contains a guideline for how to install deep security agent in
+ This section contains a guideline for how to install deep security agent in
     cloud on workload security dashboard.
 
 **Setup your enviroment**
@@ -54,21 +54,18 @@ After you create an internet gateway, you need to associate it with VPC.
 
 -   It needs to create two subnets which are:
 
--   **Public Subnet:**
+    **Public Subnet:**
 
--   This subnet will configure to access to internet through internet gateway.
-
--   This subnet will be used for Nat gateway & bastion host.
+ This subnet will configure to access to internet through internet gateway,also This subnet will be used for Nat gateway & bastion host.
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image004.jpg)
 
--   **Private Subnet:**
+   **Private Subnet:**
 
--   This subnet will be configured to access to internet through NAT Gateway.
+ This subnet will be configured to access to internet through NAT Gateway &it will be used for Ec2 instances in private subnet.
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image005.jpg)
 
-This subnet will be used for Ec2 instances in private subnet.
 
 4.  **Nat Gateway:**
 
@@ -82,59 +79,61 @@ This subnet will be used for Ec2 instances in private subnet.
 
 -   You need to create two route tables which are:
 
--   **Private route table:**
-
-![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image007.jpg)
+   **Private route table:**
 
 Once you create private route table, the default route will navigate traffic
 through local network and it needs to add new route which navigate any traffic
 to go through NAT gateway if the traffic is going to internet (you need to
 associate this route within private subnet).
 
--   **Public route table:**
+![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image007.jpg)
 
-![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image008.jpg)
+
+   **Public route table:**
 
 Once you create public route table, the default route will navigate traffic to
 go through local network and it needs to add new route which navigate any
 traffic to go through internet gateway if the traffic is going to internet (you
 need to associate this route within public subnet).
 
+![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image008.jpg)
+
+
 6.  **Security Group:**
 
 -   Aws security group let you limit and control inbound & outbound traffic in
     EC2 instances level.
 
--   **Security group for bastion host in public subnet**:
+   **Security group for bastion host in public subnet**:
 
--   Inbound RDP: Allowing RDP traffic to accept inbound traffic from authorized
+   Inbound RDP: Allowing RDP traffic to accept inbound traffic from authorized
 external device to bastion host, (**Note:** specify your own public IP to
 prevent un authorized connection to bastion host(optional)).
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image009.jpg)
 
 
--   Outbound RDP: Allowing RDP traffic from bastion host to any ec2 instances in
+   Outbound RDP: Allowing RDP traffic from bastion host to any ec2 instances in
     local network(optional).
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image010.jpg)
 
--   **Security group in private subnet:**
+   **Security group in private subnet:**
 
--   Inbound RDP: allowing RDP inbound traffic from bastion host to any instances in
+ Inbound RDP: allowing RDP inbound traffic from bastion host to any instances in
 private subnet in local network(optional).
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image011.jpg)
 
 
--   Outbound HTTPS: allowing HTTPS outbound traffic and it is used by various
+   Outbound HTTPS: allowing HTTPS outbound traffic and it is used by various
     Deep Security cloud services, you can restrict IP address in this URL in
     Deep security as service
     section:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image012.jpg)
 
--   **Note:** If you need to restrict the IP address that allowed in your
+   **Note:** If you need to restrict the IP address that allowed in your
     environment, default ports, deep security URL, and etc. Kindly check this
     URL in section:
     [https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
@@ -155,14 +154,14 @@ dashboard click on workload security.
 
 2.  **Add AWS account:**
 
--   Cloud one workload security dashboard will be opened click on computers tab
+   Cloud one workload security dashboard will be opened click on computers tab
     then on left side right click on computers then choose add AWS account.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image015.jpg)
 
 3.  **Setup type:**
 
--   You can add AWS account by using quick & Advanced.
+   You can add AWS account by using quick & Advanced.
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image016.jpg)
 
@@ -173,26 +172,26 @@ dashboard click on workload security.
 In cloud one workload dashboard, click on support and you will see two ways of
 deployment.
 
--   Manual install Deep security agent:
+   **1-Manual install Deep security agent:**
 
--   If you want to download Agent package installer and install it manually.
+If you want to download Agent package installer and install it manually.
 
--   Installation guide for manually install deep security
+Installation guide for manually install deep security
     agent:<https://help.deepsecurity.trendmicro.com/10_2/aws/Get-Started/Install/install-dsa.html>
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image018.jpg)
 
--   Deployment script:
+    **2-Deployment script:**
 
--   This option will install agent by using script.
+   This option will install agent by using script.
 
--   Installation guide for install deep security agent using deployment script:
+   Installation guide for install deep security agent using deployment script:
     <https://help.deepsecurity.trendmicro.com/10_2/aws/Add-Computers/ug-add-dep-scripts.html>
 
     ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image019.jpg)
 
 5.  **Check the state of deep security agent after deployment:**
 
--   Go to computer and see the status of instance.
+   Go to computer and see the status of instance.
 
 ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Guides%20NAT%20Gateway_files/image020.jpg)
