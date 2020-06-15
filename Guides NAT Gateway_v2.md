@@ -53,7 +53,7 @@ After you create an internet gateway, you need to associate it with VPC.
 
 -   It needs to create two subnets which are:
 
-    **Public Subnet:**
+   **Public Subnet:**
 
  This subnet will configure to access to internet through internet gateway,also This subnet will be used for Nat gateway & bastion host.
 
