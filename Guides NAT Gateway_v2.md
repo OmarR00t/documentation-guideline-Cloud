@@ -16,14 +16,13 @@ This document is divided into two sections:
 Bastion host is acting as a jump server to make connection from remote
 authorized device to instances in private subnet (optional).
 
-![](media/8ede43cca3a825262ea555b0e58868eb.jpg)
-
-![](media/f7c519cc91092c03c18f214673681189.jpg)
-
 -    ### Install deep security agent:
 
  This section contains a guideline for how to install deep security agent in
     cloud on workload security dashboard.
+
+---------------------------------------------------------------------   
+
 
 ### Setup your enviroment
 =========================
