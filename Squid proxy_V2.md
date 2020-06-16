@@ -187,13 +187,13 @@ dashboard click on workload security.
 Cloud one workload security dashboard will be opened click on computers tab
 then on left side right click on computers then choose add AWS account.
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image19.jpg)
+   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image19.jpg)
 
 3.  **Setup type:**
 
 You can add AWS account by using quick & Advanced.
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image20.jpg)
+   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image20.jpg)
 
 4.  **Add squid proxy server in workload security:**
 
