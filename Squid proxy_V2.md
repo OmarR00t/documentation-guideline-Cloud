@@ -84,7 +84,9 @@ After you create internet gateway, you need to associate it with VPC.
 >
 >  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image9.jpg)
 >   sudo yum install -y squid ((to install squid proxy))
+>   
 >   sudo service squid start ((To start squid proxy Server))
+>
 >   sudo chkconfig squid on ((to turn on  squid proxy ))
 >
 >   sudo vim /etc/squid/squid.conf (( Edit the SQUID Configurations file to
@@ -138,19 +140,15 @@ After you create internet gateway, you need to associate it with VPC.
 >>  **Inbound SSH:** Allowing SSH traffic to accept inbound traffic from authorized
 >>  external device to squid proxy, (**Note:** specify your own public IP to
 >>  prevent an authorized connection to squid proxy (optional)).
->>
+>>  **Inbound squid proxy:** allowing 3128 port traffic from internet to squid proxy.
 >>    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image13.jpg)
 >>
->>  **Inbound squid proxy:** allowing 3128 port traffic from internet to squid
->>  proxy.
->>
->>    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image14.jpg)
->>
->>  **Outbound HTTPS:**allowing HTTPS outbound traffic and it is used for various
+>>  **Outbound HTTPS:** Allowing HTTPS outbound traffic and it is used for various
 >>  Deep Security cloud services, you can restrict IP addresses in HTTPS port
 >> ,for more info please check this
 >> URL:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2]
-(https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
+>>(https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
+>>    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image14.jpg)
 >>
 >>-   **Security group in private subnet:**
 >>
