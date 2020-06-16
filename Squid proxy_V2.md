@@ -74,7 +74,7 @@ After you create internet gateway, you need to associate it with VPC.
 >   Open Puttygen program then choose load then select key pair file that you
 >  assign it with this ec2 instance then save private key.
 >
-> ![] (https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image7.jpg)
+> ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image7.jpg)
 >
 >   On putty interface choose SSH section then Auth browse your private key file
 >  that you saved from Puttygen then click open to connect ec2-instance.
@@ -83,16 +83,14 @@ After you create internet gateway, you need to associate it with VPC.
 >
 >
 >  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image9.jpg)
+>   sudo yum install -y squid ((to install squid proxy))
+>   sudo service squid start ((To start squid proxy Server))
+>   sudo chkconfig squid on ((to turn on  squid proxy ))
 >
->   sudo service squid start
->
->   sudo chkconfig squid on –\< to start squid proxy
->
->   sudo vim /etc/squid/squid.conf –\< Edit the SQUID Configurations file to
->  allow TrendMicro and AWS domains only
+>   sudo vim /etc/squid/squid.conf (( Edit the SQUID Configurations file to
+>  allow TrendMicro and AWS domains only))
 >
 >   add the following commands in squid.conf:
->
 >>    **Restrict TrendMicro Access**
 >>
 >>  **acl GOOD dstdomain .trendmicro.com .amazonaws.com**
@@ -106,7 +104,7 @@ After you create internet gateway, you need to associate it with VPC.
 >>  After you add these commands Press Esc key and type: wq to save changes to
 >> a file and exit from vim.
 >
->   sudo service squid restart–\< restart Squid proxy.
+>   sudo service squid restart(( restart Squid proxy.))
 
 5.  #### Route tables:
 
@@ -159,12 +157,12 @@ After you create internet gateway, you need to associate it with VPC.
 >>   **Inbound squid proxy:** allowing 3128 port traffic from squid proxy to Deep
 >>    security agent that has been installed in ec2 instance.
 >>
->>![] (https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image15.jpg)
->>
->> ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image16.jpg)
+>>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image15.jpg)
 >>
 >>  **Outbound squid proxy:** allowing 3128 port traffic from ec2 instance that has been
 >>installed Deep security agent to squid proxy server.
+>> ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image16.jpg)
+>>
 >>**Note:**you need to assign private IP squid proxy in inbound/outbound ec2
 >>instances in private subnet.
 
