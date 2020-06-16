@@ -53,11 +53,11 @@ After you create internet gateway, you need to associate it with VPC.
 >>  It will configure to access the internet through the internet gateway if the traffic is going to the internet & this subnet will
 >> be used for Squid proxy instance.
 >>
->>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image4.jpg)
+>>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/Capture2.JPG)
 >>
 >> **Private Subnet:**
 >>
->>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image5.jpg)
+>>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/Capture.JPG)
 >> - It will configure to access to internet through Squid proxy if the traffic is
 >>going to the internet.
 
@@ -80,7 +80,9 @@ After you create internet gateway, you need to associate it with VPC.
 >  that you saved from Puttygen then click open to connect ec2-instance.
 >
 >   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image8.jpg)
->  Squid installation commands in Linux terminal: 
+>
+>   Squid installation commands in Linux terminal: 
+>
 >   sudo yum install -y squid ((to install squid proxy))
 >   
 >   sudo service squid start ((To start squid proxy Server))
@@ -88,7 +90,7 @@ After you create internet gateway, you need to associate it with VPC.
 >   sudo chkconfig squid on ((to turn on  squid proxy ))
 >
 >   sudo vim /etc/squid/squid.conf (( Edit the SQUID Configurations file to
->  allow TrendMicro and AWS domains only))
+>   allow TrendMicro and AWS domains only))
 >
 >   add the following commands in squid.conf:
 >>    **Restrict TrendMicro Access**
@@ -117,7 +119,7 @@ After you create internet gateway, you need to associate it with VPC.
 >>  traffic to go through Squid proxy if the traffic is going to internet (you
 >>  need to associate this route within private subnet).
 >>
->>   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image11.jpg)
+>>   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image5.jpg)
 >>
 >>-   **Public route table:**
 >>
@@ -125,7 +127,7 @@ After you create internet gateway, you need to associate it with VPC.
 >>  traffic to go through local network and it needs to add new route which
 >>  navigate any traffic to go through internet gateway if the traffic is going
 >>  to internet (you need to associate this route within public subnet).
->>    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image12.jpg)
+>>    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image4.jpg)
 >>
 >>
 6.  #### Security Group:
