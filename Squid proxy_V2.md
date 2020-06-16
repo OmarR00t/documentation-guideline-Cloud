@@ -11,8 +11,7 @@ This document is divided into two sections:
  This section contains how to setup your environment and walkthrough in every
     step using AWS.
 
-    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image1.jpg)
-
+ ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image1.jpg)
     
 
 -   ### Install deep security agent:
@@ -36,7 +35,7 @@ This document is divided into two sections:
 >| 10.0. 0.0 - 10.255. 255.255     | (10/8 prefix)       |
 >| 172.16. 0.0 - 172.31. 255.255   | (172.16/12 prefix)  |
 >| 192.168. 0.0 - 192.168. 255.255 | (192.168/16 prefix) |
-
+>
 2.  #### Internet gateway:
 
 -   Internet gateway is acting as bridge connection between internet and VPC.
@@ -51,22 +50,22 @@ After you create internet gateway, you need to associate it with VPC.
 >
   >> **Public Subnet:**
 >>
-  >>  It will configure to access the internet through the internet gateway if the traffic is going to the internet & this subnet will be used for Squid proxy instance.
-
+>>  It will configure to access the internet through the internet gateway if the traffic is going to the internet & this subnet will
+>> be used for Squid proxy instance.
+>>
 >>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image4.jpg)
 >>
-  >> **Private Subnet:**
+>> **Private Subnet:**
 >>
 >>![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image5.jpg)
-
 >> - It will configure to access to internet through Squid proxy if the traffic is
-going to the internet.
+>>going to the internet.
 
 4.  #### Squid proxy:
 
 -   You need to connect to proxy server ec2-user running on Linux OS by using
     putty:
->
+
 >   Open putty On session section –\<Write (username \@Public IP address) and
 >  choose on connection type SSH.
 >
@@ -132,7 +131,7 @@ going to the internet.
 >>
 >>
 6.  #### Security Group:
->
+
 >-   Aws security group let you limit and control inbound & outbound traffic in
 >    EC2 instances level.
 >
@@ -152,7 +151,8 @@ going to the internet.
 >>  **Outbound HTTPS:**allowing HTTPS outbound traffic and it is used for various
 >>  Deep Security cloud services, you can restrict IP addresses in HTTPS port
 >> ,for more info please check this
->> URL:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2](https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
+>> URL:[https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html\#Deep2]
+(https://help.deepsecurity.trendmicro.com/10/0/Manage-Components/ports.html%23Deep2)
 >>
 >>-   **Security group in private subnet:**
 >>
@@ -167,7 +167,6 @@ going to the internet.
 >>installed Deep security agent to squid proxy server.
 >>**Note:**you need to assign private IP squid proxy in inbound/outbound ec2
 >>instances in private subnet.
->>
 
 **Install deep security agent**
 ===============================
