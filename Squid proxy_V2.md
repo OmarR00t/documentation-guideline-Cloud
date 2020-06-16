@@ -80,9 +80,7 @@ After you create internet gateway, you need to associate it with VPC.
 >  that you saved from Puttygen then click open to connect ec2-instance.
 >
 >   ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image8.jpg)
->
->
->  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image9.jpg)
+>  Squid installation commands in Linux terminal: 
 >   sudo yum install -y squid ((to install squid proxy))
 >   
 >   sudo service squid start ((To start squid proxy Server))
@@ -100,13 +98,13 @@ After you create internet gateway, you need to associate it with VPC.
 >>  **http_access allow GOOD**
 >>
 >>  **http_access deny all**
->>
+>>  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image9.jpg)
 >>  ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image10.jpg)
 >>
 >>  After you add these commands Press Esc key and type: wq to save changes to
 >> a file and exit from vim.
->
->   sudo service squid restart(( restart Squid proxy.))
+>>
+>>   sudo service squid restart(( restart Squid proxy.))
 
 5.  #### Route tables:
 
@@ -140,6 +138,7 @@ After you create internet gateway, you need to associate it with VPC.
 >>  **Inbound SSH:** Allowing SSH traffic to accept inbound traffic from authorized
 >>  external device to squid proxy, (**Note:** specify your own public IP to
 >>  prevent an authorized connection to squid proxy (optional)).
+>>  
 >>  **Inbound squid proxy:** allowing 3128 port traffic from internet to squid proxy.
 >>    ![](https://github.com/OmarR00t/documentation-beta-/blob/master/Squid%20proxy_screenshots/image13.jpg)
 >>
